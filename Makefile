@@ -27,6 +27,7 @@ DLINK_FLAGS =
 DESTDIR = /
 # Install path (bin/ is appended automatically)
 INSTALL_PREFIX = usr/local
+
 #### END PROJECT SETTINGS ####
 
 # Optionally you may move the section above to a separate config.mk file, and
@@ -222,3 +223,24 @@ $(BUILD_PATH)/%.o: $(SRC_PATH)/%.$(SRC_EXT)
 	$(CMD_PREFIX)$(CXX) $(CXXFLAGS) $(INCLUDES) -MP -MMD -c $< -o $@
 	@echo -en "\t Compile time: "
 	@$(END_TIME)
+
+# ## google test
+# # Points to the root of Google Test, relative to where this file is.
+# # Remember to tweak this if you move this file.
+# GTEST_DIR = ..
+# # All tests produced by this Makefile.  Remember to add new tests you
+# # created to the list.
+# TESTS = sample1_unittest
+
+# GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.hpp \
+#                 $(GTEST_DIR)/include/gtest/internal/*.hpp
+# GTEST_SRCS_ = $(GTEST_DIR)/src/*.cpp $(GTEST_DIR)/src/*.hpp $(GTEST_HEADERS)
+
+
+
+# testAll : $(OBJECTS)
+# 	$(CXX) $(INCLUDES) -o testAll Main_TestAll.cpp $(OBJECTS) $(CXXFLAGS)
+
+# gtest-all.o : $(GTEST_SRCS_)
+# 	$(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
+#             $(GTEST_DIR)/src/gtest-all.cc
