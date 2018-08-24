@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/evpo/cpp-project-template.svg?branch=master)](https://travis-ci.org/evpo/cpp-project-template)
+[![Build Status](https://github.com/qingzma/DBEsti?branch=master)](https://github.com/qingzma/DBEsti)
 
 # Project template
 
